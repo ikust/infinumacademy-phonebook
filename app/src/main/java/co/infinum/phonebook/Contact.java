@@ -7,6 +7,8 @@ import java.io.Serializable;
  */
 public class Contact implements Serializable {
 
+    private long id;
+
     private String firstName;
 
     private String lastName;
@@ -14,6 +16,14 @@ public class Contact implements Serializable {
     private String mail;
 
     private String number;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
