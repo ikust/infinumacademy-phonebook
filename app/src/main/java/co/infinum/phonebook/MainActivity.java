@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.inject(this);
-        phoneBook = new SQLitePhoneBook(this);
+        phoneBook = new DBFlowPhoneBook();
 
         adapter = new ContactAdapter(this, new ArrayList<Contact>());
         listView.setAdapter(adapter);
