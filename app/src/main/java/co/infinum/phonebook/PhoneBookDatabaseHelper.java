@@ -15,11 +15,19 @@ public class PhoneBookDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE PhoneBook (id INTEGER PRIMARY KEY, firstName TEXT, lastName TEXT, phone TEXT, mail TEXT)");
+        //SQL commands for creating the database first time it is accessed.
+        db.execSQL(
+                "CREATE TABLE PhoneBook ("
+                        + "id INTEGER PRIMARY KEY, "
+                        + "firstName TEXT, "
+                        + "lastName TEXT, "
+                        + "phone TEXT, "
+                        + "mail TEXT)"
+        );
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        //Database migration.
     }
 }
